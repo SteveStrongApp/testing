@@ -1,0 +1,23 @@
+function StateController($state, ContainersService, ImagesService) {
+    var vm = this;
+
+    // Public properties
+    angular.extend(vm, {
+      filters: {
+        search: '',
+        building: false
+      },
+      title: 'dashboard',
+      images: [],
+      displayImages: angular.copy(vm.images),
+      reload: reload,
+      start: start,
+      stop: stop,
+      search: search,
+      clear: clear,
+      onPageChanged: onPageChanged,
+      pageData: {
+        current_page: 1
+      },
+      perPage: 10
+    });
